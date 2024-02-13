@@ -10,13 +10,14 @@ const FlagCard = () => {
   const fetchFlags = async () => {
     let url = "https://restcountries.com/v3.1/all";
     try {
-        let response = await axios(url);
-        if (response.status === 200) {
-          setFlag(response.data);
-        }
-    //   setFlag(data);
+      let response = await axios(url);
+      if (response.status === 200) {
+        setFlag(response.data);
+      }
+      //   setFlag(data);
     } catch (error) {
-      console.error("Error Message: ", error);
+      console.log(error);
+      console.error(error);
     }
   };
 
@@ -26,16 +27,16 @@ const FlagCard = () => {
 
   console.log(flag);
 
-  if (flag.length === 0) {
-    return (
-      <div>
-        <img src={walk} alt="Loader.jpg" width={100} />
-        <p>Loading...</p>
-      </div>
-    );
-  }
+//   if (flag.length === 0) {
+//     return (
+//       <div>
+//         <img src={walk} alt="Loader.jpg" width={100} />
+//         <p>Loading...</p>
+//       </div>
+//     );
+//   }
   return (
-    <div>
+    <div className="container">
       {flag.map((country) => {
         return <CountryCard country={country} />;
       })}
