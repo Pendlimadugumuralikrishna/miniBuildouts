@@ -39,7 +39,8 @@ const StopWatch = () => {
 
   return (
     <div>
-      <p className="timer">Timer: {formatTime(time)}</p>
+      <h1>Stopwatch</h1>
+      <p className="timer">Time: {formatTime(time)}</p>
       <button onClick={handleStart}>{!startStatus ? "Start" : "Stop"}</button>
       <button onClick={handleReset}>Reset</button>
     </div>
