@@ -1,10 +1,11 @@
-import './App.css';
+import "./App.css";
+import ShowName from "./Components/ShowName";
 
 function App() {
   return (
-    <div className="App">
-      App
-    </div>
+    <>
+      <ShowName />
+    </>
   );
 }
 
