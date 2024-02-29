@@ -1,8 +1,12 @@
-import { useState } from "react";
 import "./App.css";
+import DropDownComponent from "./Components/DropDownComponent";
 
 function App() {
-  return <>App</>;
+  return (
+    <>
+      <DropDownComponent />
+    </>
+  );
 }
 
 export default App;
