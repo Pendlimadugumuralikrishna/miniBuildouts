@@ -1,12 +1,12 @@
-import './App.css'
+import "./App.css";
+import Login from "./Components/Login";
 
 function App() {
-
   return (
     <>
-      login
+      <Login />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
