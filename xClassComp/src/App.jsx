@@ -1,10 +1,12 @@
 import "./App.css";
-import React, { useState } from "react";
+import CounterClass from "./Componenets/CounterClass";
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  return <>count</>;
+  return (
+    <>
+      <CounterClass />
+    </>
+  );
 }
 
 export default App;
