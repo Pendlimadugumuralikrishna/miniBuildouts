@@ -21,8 +21,8 @@ class CounterClass extends React.Component {
       <div>
         <h2>Counter App</h2>
         <p>Count: {this.state.count}</p>
-        <button onClick={this.increment}>increment</button>
-        <button onClick={this.decrement}>decrement</button>
+        <button onClick={this.increment}>Increment</button>
+        <button onClick={this.decrement}>Decrement</button>
       </div>
     );
   }
