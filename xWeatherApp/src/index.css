@@ -1,0 +1,15 @@
+.searchContainer {
+  margin: 50px 40%;
+}
+
+.weatherCards {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.dataCard {
+  width: 200px;
+  border: 1px solid grey;
+  border-radius: 10px;
+}

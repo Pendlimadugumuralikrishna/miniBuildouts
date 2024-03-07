@@ -1,6 +1,12 @@
+import React from "react";
+import Weather from "./Components/Weather";
 
-function App() {
-  return <>App</>;
-}
+const App = () => {
+  return (
+    <>
+      <Weather />
+    </>
+  );
+};
 
 export default App;
