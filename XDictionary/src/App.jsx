@@ -1,5 +1,11 @@
+import Dictionary from "./Components/Dictionary";
+
 function App() {
-  return <>App</>;
+  return (
+    <>
+      <Dictionary />
+    </>
+  );
 }
 
 export default App;
