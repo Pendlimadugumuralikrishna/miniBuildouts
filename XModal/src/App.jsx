@@ -12,8 +12,10 @@ function App() {
 
   return (
     <div className="modalBackground">
-      <h1>User Details Modal</h1>
-      <button onClick={handleClick}>Open Form</button>
+      <h1 >User Details Modal</h1>
+      <button onClick={handleClick} className="modalTrigger">
+        Open Form
+      </button>
       {isModalOpen && (
         <Modal
           setIsModalOpen={setIsModalOpen}

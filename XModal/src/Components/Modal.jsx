@@ -26,9 +26,33 @@ const Modal = ({ setIsModalOpen, setModalOpenBackground }) => {
     setFormData((prevState) => ({ ...prevState, [key]: value }));
   };
 
+  const validationCheck = () => {
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      window.alert(
+        "Invalid email. Your email address should be in the format:- text@text.com"
+      );
+      return;
+    }
+
+    if (formData.phone.length < 10) {
+      window.alert(
+        "Invalid phone number. Please enter a 10-digit phone number."
+      );
+      return;
+    }
+
+    const inputDate = new Date(formData.dob);
+    const currentDate = new Date();
+    if (currentDate < inputDate) {
+      window.alert(
+        "Invalid date of birth. Date of birth cannot be in the future."
+      );
+      return;
+    }
+  };
+
   return (
     <div className="modalBackground" onClick={handleBackgroundClick}>
-      Modal
       <div
         className="modalContainer"
         onClick={(e) => {
@@ -39,7 +63,7 @@ const Modal = ({ setIsModalOpen, setModalOpenBackground }) => {
           <h1>Fill Details</h1>
         </div>
         <div className="modalBody">
-          <form>
+          <form onSubmit={validationCheck}>
             <label htmlFor="username">
               <h3>Username:</h3>
             </label>
@@ -83,6 +107,7 @@ const Modal = ({ setIsModalOpen, setModalOpenBackground }) => {
               onChange={handleChange}
               required
             />
+            <br />
 
             <button type="submit" className="submit">
               Submit
